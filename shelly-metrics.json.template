@@ -26,7 +26,7 @@
     "metrics": [
         {
             "type": "ht",
-            "fqname": "shellyht_info",
+            "fqname": "shelly_ht_info",
             "help": "Non-numeric data, value is always 1",
             "labels": [
                 "shelly_name",
@@ -43,7 +43,7 @@
         },
         {
             "type": "ht",
-            "fqname": "shellyht_temperature",
+            "fqname": "shelly_ht_temperature",
             "help": "shellyht temperature",
             "resultKey": "temperature",
             "labels": [
@@ -53,7 +53,7 @@
         },
         {
             "type": "ht",
-            "fqname": "shellyht_humidity",
+            "fqname": "shelly_ht_humidity",
             "help": "shellyht humidity",
             "resultKey": "humidity",
             "labels": [

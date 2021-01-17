@@ -17,7 +17,7 @@ import (
 
 var (
 	flagAddress     = flag.String("listen-address", "127.0.0.1:9784", "The address to listen on for HTTP requests.") //TODO port?
-	flagMetricsFile = flag.String("metrics-file", "shelly_metrics.json", "The JSON file with the metric definitions.")
+	flagMetricsFile = flag.String("metrics-file", "shelly-metrics.json", "The JSON file with the metric definitions.")
 
 	flagTest = flag.Bool("test", false, "Test configured metrics")
 )
