@@ -1,0 +1,65 @@
+{
+    "products": [
+        {
+            "type": "ht",
+            "export": {
+                "isok": "isok",
+                "temperature": "data.device_status.tmp.value",
+                "humidity": "data.device_status.hum.value",
+                "battery": "data.device_status.bat.value",
+                "has_update": "data.device_status.update.has_update",
+                "firmware": "data.device_status.getinfo.fw_info.fw",
+                "mac": "data.device_status.mac",
+                "updated": "data.device_status._updated"
+            },
+            "devices": [
+                {
+                    "auth_key": "...",
+                    "id": "...",
+                    "url": "...",
+                    "shelly_name": "S1",
+                    "name": "Outdoor"
+                }
+            ]
+        }
+    ],
+    "metrics": [
+        {
+            "type": "ht",
+            "fqname": "shellyht_info",
+            "help": "Non-numeric data, value is always 1",
+            "labels": [
+                "shelly_name",
+                "name",
+                "isok",
+                "temperature",
+                "humidity",
+                "battery",
+                "has_update",
+                "firmware",
+                "mac",
+                "updated"
+            ]
+        },
+        {
+            "type": "ht",
+            "fqname": "shellyht_temperature",
+            "help": "shellyht temperature",
+            "resultKey": "temperature",
+            "labels": [
+                "shelly_name",
+                "name"
+            ]
+        },
+        {
+            "type": "ht",
+            "fqname": "shellyht_humidity",
+            "help": "shellyht humidity",
+            "resultKey": "humidity",
+            "labels": [
+                "shelly_name",
+                "name"
+            ]
+        }
+    ]
+}
