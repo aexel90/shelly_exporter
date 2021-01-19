@@ -506,7 +506,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 422
+                "value": 297
               },
               {
                 "id": "unit",
@@ -580,7 +580,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 282
+                "value": 142
               }
             ]
           },
@@ -592,7 +592,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 97
+                "value": 91
               }
             ]
           },
@@ -604,7 +604,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 367
+                "value": 179
               }
             ]
           },
@@ -616,7 +616,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 506
+                "value": 268
               }
             ]
           }
@@ -715,5 +715,5 @@
   "timezone": "",
   "title": "Shelly Temperature",
   "uid": "soUBz7Wgk",
-  "version": 19
+  "version": 20
 }
