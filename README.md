@@ -57,7 +57,33 @@ Usage:
 
 ## Grafana Dashboard
 
-Dashboard ID is 13739.
+### weather widget
+
+https://weatherwidget.io/
+
+    <!doctype html> <html lang="de">
+    <head>
+    </head>
+    <body>
+    <a class="weatherwidget-io" href="https://forecast7.com/de/51d0513d74/dresden/" data-label_1="DRESDEN" data-theme="original" data-highcolor="#88d976" >DRESDEN</a>
+    <script>
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+        setInterval('__weatherwidget_init()', 1800000) <!-- refresh widget every 30 minutes (1800000 milliseconds): -->
+        }
+    }(document,'script','weatherwidget-io-js');
+    </script>
+    </body>
+    </html>
+
+### dashboard
+
+Grafana-ID: 13739
 
 https://grafana.com/grafana/dashboards/13739
 
