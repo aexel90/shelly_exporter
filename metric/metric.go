@@ -29,9 +29,7 @@ type Metric struct {
 
 // Device struct
 type Device struct {
-	AuthKey    string `json:"auth_key"`
 	ID         string `json:"id"`
-	URL        string `json:"url"`
 	ShellyName string `json:"shelly_name"`
 	Name       string `json:"name"`
 }
@@ -43,8 +41,15 @@ type Products struct {
 	Export  map[string]string `json:"export"`
 }
 
+// Account struct
+type Account struct {
+	AuthKey string `json:"auth_key"`
+	URL     string `json:"url"`
+}
+
 // MetricsFile struct
 type MetricsFile struct {
 	Metrics  []*Metric   `json:"metrics"`
 	Products []*Products `json:"products"`
+	Account  *Account    `json:"account"`
 }

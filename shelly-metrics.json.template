@@ -1,4 +1,9 @@
 {
+    {
+    "account":{
+        "auth_key": "",
+        "url": ""
+    },
     "products": [
         {
             "type": "ht",
@@ -14,11 +19,14 @@
             },
             "devices": [
                 {
-                    "auth_key": "...",
-                    "id": "...",
-                    "url": "...",
+                    "id": "956b54",                  
                     "shelly_name": "S1",
                     "name": "Outdoor"
+                },
+                {
+                    "id": "d50431",                   
+                    "shelly_name": "S2",
+                    "name": "Indoor"
                 }
             ]
         }

@@ -20,7 +20,7 @@ type Collector struct {
 // NewShellyCollector initialization
 func NewShellyCollector(metricsFile *metric.MetricsFile) (*Collector, error) {
 
-	hueExporter := shelly.Exporter{Products: metricsFile.Products}
+	hueExporter := shelly.Exporter{Products: metricsFile.Products, Account: metricsFile.Account}
 	return &Collector{&hueExporter, metricsFile.Metrics}, nil
 }
 

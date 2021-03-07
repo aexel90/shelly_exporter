@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"time"
 
 	"github.com/aexel90/shelly_exporter/metric"
 	"github.com/tidwall/gjson"
@@ -12,6 +13,7 @@ import (
 // Exporter data
 type Exporter struct {
 	Products []*metric.Products
+	Account  *metric.Account
 }
 
 // Collect metrics
@@ -22,7 +24,10 @@ func (exporter *Exporter) Collect(metrics []*metric.Metric) (err error) {
 
 		deviceResults := []map[string]interface{}{}
 		for _, device := range product.Devices {
-			apiURL := "https://" + device.URL + "/device/Status" + "&auth_key=" + device.AuthKey + "&id=" + device.ID
+
+			time.Sleep(2 * time.Second)
+
+			apiURL := "https://" + exporter.Account.URL + "/device/Status" + "&auth_key=" + exporter.Account.AuthKey + "&id=" + device.ID
 			response, err := http.Get(apiURL)
 			if err != nil {
 				return err

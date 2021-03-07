@@ -21,13 +21,23 @@ Shelly cloud API access: https://shelly.cloud/documents/developers/shelly_cloud_
 Determine "auth_key", "id" and "url" of your device via Shelly cloud API access and update in shelly-metrics.json.
 "shelly_name" and "name" can be determined on your own.
 
-    "devices": [
+    "account": [
                 {
                     "auth_key": "NGMxZTd1aWQ816EA26E4CD0F0A0DB602B9A77C3D195CD169EB86703ED0...",
-                    "id": "956b54",
-                    "url": "shelly-20-eu.shelly.cloud",
+                    "url": "shelly-20-eu.shelly.cloud"
+                }
+            ]
+
+    "devices": [
+                {
+                    "id": "956...",                  
                     "shelly_name": "S1",
                     "name": "Outdoor"
+                },
+                {
+                    "id": "d50...",                   
+                    "shelly_name": "S2",
+                    "name": "Indoor"
                 }
             ]
 
