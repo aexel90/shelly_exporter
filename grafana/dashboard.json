@@ -52,6 +52,7 @@
             "mode": "fixed"
           },
           "custom": {},
+          "decimals": 1,
           "mappings": [],
           "max": 45,
           "min": -5,
@@ -93,7 +94,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "shelly_ht_temperature{shelly_name=\"S1\"}",
+          "expr": "shelly_ht_temperature{shelly_name=\"S2\"}",
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
@@ -115,6 +116,7 @@
             "mode": "fixed"
           },
           "custom": {},
+          "decimals": 1,
           "mappings": [],
           "max": 45,
           "min": -5,
@@ -156,7 +158,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "shelly_ht_temperature{shelly_name=\"S2\"}",
+          "expr": "shelly_ht_temperature{shelly_name=\"S1\"}",
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
@@ -706,5 +708,5 @@
   "timezone": "",
   "title": "Shelly Temperature",
   "uid": "soUBz7Wgk",
-  "version": 45
+  "version": 48
 }
