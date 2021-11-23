@@ -59,11 +59,33 @@ Usage:
 
 ### Running within prometheus:
 
-    TODO
+    /root/go/bin/shelly_exporter -metrics-file /root/go/bin/shelly-metrics.json
 
 ### Test exporter:
 
-    TODO
+    /root/go/bin/shelly_exporter -metrics-file /root/go/bin/shelly-metrics.json -test
+
+    Metric: shelly_ht_info
+    - Exporter Result:
+    - Exporter Result 0:
+        - humidity="53"
+        - mac="E09806956B54"
+        - name="Indoor"
+        - isok="true"
+        - shelly_name="S1"
+        - temperature="22.88"
+        - battery="85"
+        - has_update="false"
+        - firmware=""
+        - updated="2021-11-23 19:43:54"
+    - Exporter Result 1:
+        - has_update="false"
+        - firmware="20210323-104951/v1.10.1-gf276b51"
+        - isok="true"
+        - name="Outdoor"
+        - temperature="6.38"
+        ...
+
 
 ## Grafana Dashboard
 
