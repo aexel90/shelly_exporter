@@ -3,28 +3,35 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
   "editable": true,
-  "gnetId": null,
+  "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 7,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
       },
       "gridPos": {
         "h": 4,
@@ -37,21 +44,20 @@
         "content": "<html>\n<iframe src=\"https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=large&timezone=Europe%2FBerlin\" width=\"100%\" frameborder=\"0\" seamless></iframe> \n</html>",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "",
+      "pluginVersion": "8.5.3",
       "type": "text"
     },
     {
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "fixedColor": "light-blue",
             "mode": "fixed"
           },
-          "custom": {},
           "decimals": 1,
           "mappings": [],
           "max": 45,
@@ -91,7 +97,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "expr": "shelly_ht_temperature{shelly_name=\"S2\"}",
@@ -102,20 +108,20 @@
           "refId": "A"
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Outdoor Temperature",
       "type": "stat"
     },
     {
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "fixedColor": "semi-dark-orange",
             "mode": "fixed"
           },
-          "custom": {},
           "decimals": 1,
           "mappings": [],
           "max": 45,
@@ -155,7 +161,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "expr": "shelly_ht_temperature{shelly_name=\"S1\"}",
@@ -166,18 +172,13 @@
           "refId": "A"
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Indoor Temperature",
       "type": "stat"
     },
     {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
       },
       "gridPos": {
         "h": 12,
@@ -190,20 +191,14 @@
         "content": "<html>\r\n<script type=\"text/javascript\">\r\n    var renew = setInterval(function(){\r\n    var image = document.getElementById(\"img\");\r\n    var url = \"https://www.wetterdienst.de/maps/radar/Radarfilm_Deutschland.gif\" + \"?\" + Math.random()\r\n    /* console.log(url); */\r\n    image.src = url;\r\n},240000); /* update after 4 minutes - random against cache */\r\n</script>\r\n<head>\r\n</head>\r\n<body>\r\n<img id=\"img\" src=\"https://www.wetterdienst.de/maps/radar/Radarfilm_Deutschland.gif\">\r\n</body>\r\n</html>",
         "mode": "html"
       },
-      "pluginVersion": "7.4.3",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "",
+      "pluginVersion": "8.5.3",
       "transparent": true,
       "type": "text"
     },
     {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
       },
       "gridPos": {
         "h": 4,
@@ -216,10 +211,7 @@
         "content": "<!doctype html> <html lang=\"de\">\n<head>\n</head>\n<body>\n<a class=\"weatherwidget-io\" href=\"https://forecast7.com/de/51d0513d74/dresden/\" data-label_1=\"DRESDEN\" data-theme=\"original\" data-highcolor=\"#88d976\" >DRESDEN</a>\n<script>\n!function(d,s,id){\n\tvar js,fjs=d.getElementsByTagName(s)[0];\n\tif(!d.getElementById(id)){\n\t  js=d.createElement(s);\n\t  js.id=id;\n\t  js.src='https://weatherwidget.io/js/widget.min.js';\n\t  fjs.parentNode.insertBefore(js,fjs);\n\t  setInterval('__weatherwidget_init()', 1800000) <!-- refresh widget every 30 minutes (1800000 milliseconds): -->\n\t}\n}(document,'script','weatherwidget-io-js');\n</script>\n</body>\n</html>",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "",
+      "pluginVersion": "8.5.3",
       "transparent": true,
       "type": "text"
     },
@@ -232,14 +224,11 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
-      "decimals": 0,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
       },
+      "decimals": 0,
       "fill": 0,
       "fillGradient": 1,
       "gridPos": {
@@ -268,7 +257,7 @@
         "alertThreshold": false
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -292,9 +281,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Temperature",
       "tooltip": {
         "shared": true,
@@ -303,45 +290,32 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "$$hashKey": "object:46",
-          "decimals": null,
           "format": "celsius",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "$$hashKey": "object:47",
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
       },
       "gridPos": {
         "h": 12,
@@ -354,10 +328,7 @@
         "content": "<html>\r\n<script type=\"text/javascript\">\r\nvar renew = setInterval(function(){\r\n    var image = document.getElementById(\"img2\");\r\n    var url = \"https://www.wetterdienst.de/maps/radar/Radarfilm_Ost.gif\" + \"?\" + Math.random()\r\n    /* console.log(url); */\r\n    image.src = url;\r\n},240000); /* update after 4 minutes - random against cache */\r\n</script>\r\n<head>\r\n</head>\r\n<body>\r\n<img id=\"img2\" src=\"https://www.wetterdienst.de/maps/radar/Radarfilm_Ost.gif\">\r\n</body>\r\n</html>",
         "mode": "html"
       },
-      "pluginVersion": "7.4.3",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "",
+      "pluginVersion": "8.5.3",
       "transparent": true,
       "type": "text"
     },
@@ -370,14 +341,11 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
-      "decimals": 0,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
       },
+      "decimals": 0,
       "fill": 0,
       "fillGradient": 1,
       "gridPos": {
@@ -406,7 +374,7 @@
         "alertThreshold": false
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -424,9 +392,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Humidity",
       "tooltip": {
         "shared": true,
@@ -435,9 +401,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -445,29 +409,25 @@
         {
           "$$hashKey": "object:46",
           "format": "percent",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "$$hashKey": "object:47",
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "nLstfzWgz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -476,7 +436,8 @@
           "custom": {
             "align": "left",
             "displayMode": "color-text",
-            "filterable": false
+            "filterable": false,
+            "inspect": false
           },
           "mappings": [],
           "thresholds": {
@@ -624,10 +585,17 @@
       "id": 13,
       "interval": "",
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "expr": "shelly_ht_info",
@@ -638,8 +606,6 @@
           "refId": "A"
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Sensor Overview",
       "transformations": [
         {
@@ -694,7 +660,7 @@
     }
   ],
   "refresh": "5m",
-  "schemaVersion": 27,
+  "schemaVersion": 36,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -708,5 +674,6 @@
   "timezone": "",
   "title": "Shelly Temperature",
   "uid": "soUBz7Wgk",
-  "version": 48
+  "version": 48,
+  "weekStart": ""
 }
