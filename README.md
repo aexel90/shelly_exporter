@@ -1,10 +1,11 @@
 # Shelly exporter for prometheus and grafana
 
-This exporter exports some temperature and humdidity values from Shelly H&T to prometheus.
+This exporter exports some metrics from Shelly to prometheus.
 
 ![ShellyPIC](https://shelly.cloud/wp-content/uploads/2020/06/Shelly_HT.png)
+![ShellyPIC](https://shelly.cloud/wp-content/uploads/2020/06/Shelly_2.5.png)
 
-## Shelly H&T
+## Shelly API
 
 Shelly API: https://shelly-api-docs.shelly.cloud/#shelly-h-amp-t
 
@@ -57,11 +58,11 @@ Usage:
 
 ## Example execution
 
-### Running within prometheus:
+### Execute:
 
     /root/go/bin/shelly_exporter -metrics-file /root/go/bin/shelly-metrics.json
 
-### Test exporter:
+### Testing:
 
     /root/go/bin/shelly_exporter -metrics-file /root/go/bin/shelly-metrics.json -test
 

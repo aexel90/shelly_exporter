@@ -1,8 +1,7 @@
 {
-    {
     "account":{
-        "auth_key": "",
-        "url": ""
+        "auth_key": "...",
+        "url": "shelly-20-eu.shelly.cloud"
     },
     "products": [
         {
@@ -21,17 +20,73 @@
                 {
                     "id": "956b54",                  
                     "shelly_name": "S1",
-                    "name": "Outdoor"
+                    "name": "Indoor"
                 },
                 {
-                    "id": "d50431",                   
+                    "id": "9574a8",                   
                     "shelly_name": "S2",
-                    "name": "Indoor"
+                    "name": "Outdoor"
+                }
+            ]
+        },
+        {
+            "type": "25_roller_blind",
+            "export": {
+                "isok": "isok",
+                "temperature": "data.device_status.temperature",
+                "temperature_status": "data.device_status.temperature_status",
+                "uptime": "data.device_status.uptime",
+                "voltage": "data.device_status.voltage",
+                "wifi_connected": "data.device_status.wifi_sta.connected",
+                "firmware": "data.device_status.getinfo.fw_info.fw",
+                "mac": "data.device_status.mac",
+                "updated": "data.device_status._updated"
+            },
+            "devices": [
+                {
+                    "id": "34945469effa",                  
+                    "shelly_name": "Rollo Arbeitszimmer",
+                    "name": "Rollo Arbeitszimmer"
                 }
             ]
         }
     ],
     "metrics": [
+        {
+            "type": "25_roller_blind",
+            "fqname": "shelly_25_roller_blind_info",
+            "help": "Non-numeric data, value is always 1",
+            "labels": [
+                "shelly_name",
+                "isok",
+                "temperature",
+                "temperature_status",
+                "uptime",
+                "voltage",
+                "wifi_connected",
+                "firmware",
+                "mac",
+                "updated"
+            ]
+        },
+        {
+            "type": "25_roller_blind",
+            "fqname": "shelly_25_roller_blind_temperature",
+            "help": "25_roller_blind temperature",
+            "resultKey": "temperature",
+            "labels": [
+                "shelly_name"
+            ]
+        },
+        {
+            "type": "25_roller_blind",
+            "fqname": "shelly_25_roller_blind_voltage",
+            "help": "25_roller_blind voltage",
+            "resultKey": "voltage",
+            "labels": [
+                "shelly_name"
+            ]
+        },
         {
             "type": "ht",
             "fqname": "shelly_ht_info",
