@@ -121,3 +121,4 @@ Grafana-ID: 13739
 https://grafana.com/grafana/dashboards/13739
 
 ![Grafana](https://raw.githubusercontent.com/aexel90/shelly_exporter/main/grafana/screenshot.jpg)
+![Grafana Rollo](https://raw.githubusercontent.com/aexel90/shelly_exporter/main/grafana/screenshot_rollo.jpg)
