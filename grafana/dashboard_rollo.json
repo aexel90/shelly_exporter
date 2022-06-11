@@ -187,7 +187,7 @@
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "yellow",
+                  "fixedColor": "green",
                   "mode": "fixed"
                 }
               }
@@ -372,6 +372,18 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Updated"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "dateTimeAsLocal"
+              }
+            ]
           }
         ]
       },
@@ -392,7 +404,12 @@
           "show": false
         },
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Temperature"
+          }
+        ]
       },
       "pluginVersion": "8.5.3",
       "targets": [
@@ -424,7 +441,8 @@
                 "updated",
                 "uptime",
                 "voltage",
-                "wifi_connected"
+                "wifi_connected",
+                "firmware"
               ]
             }
           }
@@ -478,13 +496,13 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Shelly Rollo",
   "uid": "nQUvg7gRk",
-  "version": 2,
+  "version": 8,
   "weekStart": ""
 }

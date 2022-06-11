@@ -52,7 +52,18 @@
                     "id": "483fda8d0ef6",                  
                     "shelly_name": "Rollo Wohnzimmer",
                     "name": "Rollo Wohnzimmer"
+                },
+				{
+                    "id": "84cca8a846af",                  
+                    "shelly_name": "Rollo Küche",
+                    "name": "Rollo Küche"
+                },
+				{
+                    "id": "4c752534d405",                  
+                    "shelly_name": "Rollo Bad",
+                    "name": "Rollo Bad"
                 }
+            ]
             ]
         }
     ],
