@@ -62,6 +62,11 @@
                     "id": "4c752534d405",                  
                     "shelly_name": "Rollo Bad",
                     "name": "Rollo Bad"
+                },
+				{
+                    "id": "4c752533a9a0",                  
+                    "shelly_name": "Rollo Schlafzimmer",
+                    "name": "Rollo Schlafzimmer"
                 }
             ]
             ]
