@@ -22,25 +22,38 @@ Shelly cloud API access: https://shelly.cloud/documents/developers/shelly_cloud_
 Determine "auth_key", "id" and "url" of your device via Shelly cloud API access and update in shelly-metrics.json.
 "shelly_name" and "name" can be determined on your own.
 
-    "account": [
+    {
+    "account":{
+        "auth_key": "...",
+        "url": "..."
+    },
+    "products": [
+        {
+            "type": "ht",
+            "export": {
+                "isok": "isok",
+                "temperature": "data.device_status.tmp.value",
+                "humidity": "data.device_status.hum.value",
+                "battery": "data.device_status.bat.value",
+                "has_update": "data.device_status.update.has_update",
+                "firmware": "data.device_status.getinfo.fw_info.fw",
+                "mac": "data.device_status.mac",
+                "updated": "data.device_status._updated"
+            },
+            "devices": [
                 {
-                    "auth_key": "NGMxZTd1aWQ816EA26E4CD0F0A0DB602B9A77C3D195CD169EB86703ED0...",
-                    "url": "shelly-20-eu.shelly.cloud"
-                }
-            ]
-
-    "devices": [
-                {
-                    "id": "956...",                  
+                    "id": "956b54",                  
                     "shelly_name": "S1",
-                    "name": "Outdoor"
+                    "name": "Indoor"
                 },
                 {
-                    "id": "d50...",                   
+                    "id": "9574a8",                   
                     "shelly_name": "S2",
-                    "name": "Indoor"
+                    "name": "Outdoor"
                 }
             ]
+        },
+        ...
 
 ## Running
 
@@ -60,11 +73,11 @@ Usage:
 
 ### Execute:
 
-    /root/go/bin/shelly_exporter -metrics-file /root/go/bin/shelly-metrics.json
+    $GOPATH/go/bin/shelly_exporter -metrics-file $GOPATH/go/bin/shelly-metrics.json
 
 ### Testing:
 
-    /root/go/bin/shelly_exporter -metrics-file /root/go/bin/shelly-metrics.json -test
+    $GOPATH/go/bin/shelly_exporter -metrics-file $GOPATH/go/bin/shelly-metrics.json -test
 
     Metric: shelly_ht_info
     - Exporter Result:
