@@ -24,14 +24,14 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 8,
+  "id": 4,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "nLstfzWgz"
+        "uid": "woSee8Zgk"
       },
       "fieldConfig": {
         "defaults": {
@@ -39,6 +39,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "axisSoftMax": 60,
@@ -100,7 +102,8 @@
             "min"
           ],
           "displayMode": "table",
-          "placement": "right"
+          "placement": "right",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "multi",
@@ -112,7 +115,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "nLstfzWgz"
+            "uid": "woSee8Zgk"
           },
           "editorMode": "code",
           "expr": "shelly_25_roller_blind_temperature",
@@ -129,7 +132,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "nLstfzWgz"
+        "uid": "woSee8Zgk"
       },
       "fieldConfig": {
         "defaults": {
@@ -137,6 +140,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
@@ -210,7 +215,8 @@
             "min"
           ],
           "displayMode": "table",
-          "placement": "right"
+          "placement": "right",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "multi",
@@ -222,7 +228,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "nLstfzWgz"
+            "uid": "woSee8Zgk"
           },
           "editorMode": "code",
           "expr": "shelly_25_roller_blind_voltage",
@@ -239,7 +245,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "nLstfzWgz"
+        "uid": "woSee8Zgk"
       },
       "fieldConfig": {
         "defaults": {
@@ -411,12 +417,12 @@
           }
         ]
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.2.1",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "nLstfzWgz"
+            "uid": "woSee8Zgk"
           },
           "editorMode": "code",
           "expr": "shelly_25_roller_blind_info",
@@ -489,7 +495,7 @@
     }
   ],
   "refresh": "5m",
-  "schemaVersion": 36,
+  "schemaVersion": 37,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -503,6 +509,6 @@
   "timezone": "",
   "title": "Shelly Rollo",
   "uid": "nQUvg7gRk",
-  "version": 8,
+  "version": 2,
   "weekStart": ""
 }
