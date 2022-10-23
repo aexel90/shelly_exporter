@@ -11,12 +11,6 @@ Shelly API: https://shelly-api-docs.shelly.cloud/#shelly-h-amp-t
 
 Shelly cloud API access: https://shelly.cloud/documents/developers/shelly_cloud_api_access.pdf
 
-## Building
-
-    go get github.com/aexel90/shelly_exporter/
-    cd $GOPATH/src/github.com/aexel90/shelly_exporter
-    go install
-
 ## shelly-metrics.json
 
 Determine "auth_key", "id" and "url" of your device via Shelly cloud API access and update in shelly-metrics.json.
@@ -55,7 +49,13 @@ Determine "auth_key", "id" and "url" of your device via Shelly cloud API access 
         },
         ...
 
-## Running
+## Build
+
+    go get github.com/aexel90/shelly_exporter/
+    cd $GOPATH/src/github.com/aexel90/shelly_exporter
+    go install
+
+## Execution
 
 Usage:
 
@@ -68,8 +68,6 @@ Usage:
                 The JSON file with the metric definitions. (default "shelly-metrics.json")
         -test
                 Test configured metrics
-
-## Example execution
 
 ### Execute:
 
@@ -100,6 +98,11 @@ Usage:
         - temperature="6.38"
         ...
 
+## Docker
+
+        cp shelly-metrics.json.template shelly-metrics.json
+        vi shelly-metrics.json
+        docker-compose up -d --build
 
 ## Grafana Dashboard
 
