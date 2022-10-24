@@ -141,5 +141,5 @@ https://grafana.com/grafana/dashboards/13739
     # If set to true Grafana will allow script tags in text panels. Not recommended as it enable XSS vulnerabilities.
     disable_sanitize_html = true
 
-![Grafana](https://raw.githubusercontent.com/aexel90/shelly_exporter/main/grafana/screenshot.jpg)
+![Grafana](https://raw.githubusercontent.com/aexel90/shelly_exporter/main/grafana/screenshot_temp.jpg)
 ![Grafana Rollo](https://raw.githubusercontent.com/aexel90/shelly_exporter/main/grafana/screenshot_rollo.jpg)
