@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 11,
+  "id": 15,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -53,7 +53,7 @@
         },
         "dateSettings": {
           "dateFormat": "DD.MM.YYYY",
-          "fontSize": "60px",
+          "fontSize": "20px",
           "fontWeight": "normal",
           "locale": "",
           "showDate": true
@@ -61,7 +61,7 @@
         "mode": "time",
         "refresh": "sec",
         "timeSettings": {
-          "fontSize": "60px",
+          "fontSize": "50px",
           "fontWeight": "normal"
         },
         "timezone": "Europe/Berlin",
@@ -73,7 +73,6 @@
         }
       },
       "pluginVersion": "2.1.2",
-      "title": "Date",
       "type": "grafana-clock-panel"
     },
     {
@@ -715,6 +714,6 @@
   "timezone": "",
   "title": "Shelly Temperature",
   "uid": "soUBz7Wgk",
-  "version": 2,
+  "version": 4,
   "weekStart": ""
 }
