@@ -31,7 +31,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "TYsIbjiRz"
       },
       "gridPos": {
         "h": 4,
@@ -39,18 +39,42 @@
         "x": 0,
         "y": 0
       },
-      "id": 17,
+      "id": 20,
       "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
+        "bgColor": "",
+        "clockType": "24 hour",
+        "countdownSettings": {
+          "endCountdownTime": "2023-01-15T21:59:47+01:00",
+          "endText": "00:00:00"
         },
-        "content": "<html>\n<iframe src=\"https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=large&timezone=Europe%2FBerlin\" width=\"100%\" frameborder=\"0\" seamless></iframe> \n</html>",
-        "mode": "markdown"
+        "countupSettings": {
+          "beginCountupTime": "2023-01-15T21:59:47+01:00",
+          "beginText": "00:00:00"
+        },
+        "dateSettings": {
+          "dateFormat": "DD.MM.YYYY",
+          "fontSize": "60px",
+          "fontWeight": "normal",
+          "locale": "",
+          "showDate": true
+        },
+        "mode": "time",
+        "refresh": "sec",
+        "timeSettings": {
+          "fontSize": "60px",
+          "fontWeight": "normal"
+        },
+        "timezone": "Europe/Berlin",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
+        }
       },
-      "pluginVersion": "9.3.2",
-      "type": "text"
+      "pluginVersion": "2.1.2",
+      "title": "Date",
+      "type": "grafana-clock-panel"
     },
     {
       "datasource": {},
@@ -691,6 +715,6 @@
   "timezone": "",
   "title": "Shelly Temperature",
   "uid": "soUBz7Wgk",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
