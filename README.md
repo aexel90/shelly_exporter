@@ -16,7 +16,7 @@ Shelly cloud API access: https://shelly.cloud/documents/developers/shelly_cloud_
 Test API with HTTP POST:
     
     https://<url>/device/status?auth_key=<auth_key>&id=<id>
-## shelly-metrics.json
+## Configuration File: shelly-metrics.json
 
 Determine "auth_key", "id" and "url" of your device via Shelly cloud API access and update in shelly-metrics.json.
 "shelly_name" and "name" can be determined on your own.
