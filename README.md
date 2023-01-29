@@ -1,9 +1,16 @@
-# Shelly exporter for prometheus and grafana
+# Prometheus Shelly Exporter and Grafana integration
 
-This exporter exports some metrics from Shelly to prometheus.
+This exporter exports some metrics from Shelly to Prometheus.
 
-![ShellyPIC](https://shelly.cloud/wp-content/uploads/2020/06/Shelly_HT.png)
-![ShellyPIC](https://shelly.cloud/wp-content/uploads/2020/06/Shelly_2.5.png)
+Testes with:
+- Shelly H&T
+
+<img src="https://www.shelly.cloud/_Resources/Persistent/d/3/4/6/d346492eefc1e0327b4413aa07f1cefcbdadb71f/s_ht_x1-1000x1000.webp" width="250">
+
+
+- Shelly Plus 2PM
+
+<img src="https://www.shelly.cloud/_Resources/Persistent/1/f/b/2/1fb2ef6f3ce8e6228fb22370937d97e88b4d4720/Plus-2PM-1200x1200.webp" width="250">
 
 ## Shelly API
 
@@ -11,6 +18,9 @@ Shelly API: https://shelly-api-docs.shelly.cloud/#shelly-h-amp-t
 
 Shelly cloud API access: https://shelly.cloud/documents/developers/shelly_cloud_api_access.pdf
 
+Test API with:
+    
+    HTTP POST: https://<url>/device/status?auth_key=<auth_key>&id=<id>
 ## shelly-metrics.json
 
 Determine "auth_key", "id" and "url" of your device via Shelly cloud API access and update in shelly-metrics.json.
