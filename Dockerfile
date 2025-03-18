@@ -9,7 +9,6 @@ RUN go build -o /shelly_exporter
 FROM alpine:latest
 WORKDIR /
 COPY --from=build /shelly_exporter /shelly_exporter
-COPY shelly-metrics.json ./
-EXPOSE 9773
+EXPOSE 9784
 
 ENTRYPOINT [ "sh", "-c", "/shelly_exporter -metrics-file shelly-metrics.json" ]
